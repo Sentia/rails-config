@@ -6,4 +6,4 @@ Config related files
 
 - Copy .codeclimate.yml into your project
 - Include the following into your gitignore
-```/coverage```
+      /coverage
