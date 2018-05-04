@@ -1,0 +1,37 @@
+Metrics/LineLength:
+  Enabled: true
+  Max: 100
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+
+# private/protected/public
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/SpaceInsideArrayLiteralBrackets:
+   EnforcedStyle: space
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: no_empty_lines
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+exclude_patterns:
+  - "config/"
+  - "db/"
+  - "dist/"
+  - "features/"
+  - "**/node_modules/"
+  - "script/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "**/vendor/"
+  - "**/*.d.ts"
