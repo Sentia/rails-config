@@ -3,7 +3,9 @@ prepare:
   fetch:
     - url: "https://raw.githubusercontent.com/example/example/master/.rubocop.yml"
       path: ".rubocop.yml"
-
+  fetch:
+    - url: "https://raw.githubusercontent.com/example/example/master/config.reek"
+      path: "config.reek"
 # checks:
 #   file-lines:
 #     config:
