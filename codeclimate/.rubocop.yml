@@ -23,15 +23,16 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-exclude_patterns:
-  - "config/"
-  - "db/"
-  - "dist/"
-  - "features/"
-  - "**/node_modules/"
-  - "script/"
-  - "**/spec/"
-  - "**/test/"
-  - "**/tests/"
-  - "**/vendor/"
-  - "**/*.d.ts"
+AllCops:
+  Exclude:
+    - "config/**/*"
+    - "db/**/*"
+    - "dist/**/*"
+    - "features/**/*"
+    - "**/node_modules/**/*"
+    - "script/**/*"
+    - "**/spec/**/*"
+    - "**/test/**/*"
+    - "**/tests/**/*"
+    - "**/vendor/**/*"
+    - "**/*.d.ts"
