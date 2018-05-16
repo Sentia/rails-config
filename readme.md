@@ -5,7 +5,7 @@ Config related files
 ### Scripts
 
 - Copy all scripts into /scripts
-- Ensure `chmod +x /scripts/*` is performed
+- Ensure `chmod +x scripts/*` is performed
 
 ### Codeclimate
 
