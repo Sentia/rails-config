@@ -11,6 +11,9 @@ echo '--- preparing database'
 
 echo '--- running specs'
 ./bin/rspec
+result=$?
 
 echo '--- upload coverage results'
 buildkite-agent artifact upload "coverage/.resultset.json"
+
+exit $result
