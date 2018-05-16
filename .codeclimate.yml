@@ -1,44 +1,46 @@
 version: "2" # required to adjust maintainability checks
 prepare:
   fetch:
-    - url: "https://raw.githubusercontent.com/example/example/master/.rubocop.yml"
-      path: ".rubocop.yml"
-  fetch:
-    - url: "https://raw.githubusercontent.com/example/example/master/config.reek"
-      path: "config.reek"
-# checks:
-#   file-lines:
-#     config:
-#       threshold: 100
-# plugins:
-#   rubocop:
-#     enabled: true
-#   brakeman:
-#     enabled: true
-#   csslint:
-#     enabled: true
-#   eslint:
-#     enabled: true
-#   fixme:
-#     enabled: true
-#   reek:
-#     enabled: true
-#     checks:
-#       IrresponsibleModule:
-#         enabled: false
-#   markdownlint:
-#     enabled: true
-#   git-legal:
-#     enabled: true
-# exclude_patterns:
-#   - "config/"
-#   - "db/"
-#   - "dist/"
-#   - "features/"
-#   - "**/node_modules/"
-#   - "script/"
-#   - "**/spec/"
-#   - "**/test/"
-#   - "**/tests/"
-#   - "**/vendor/"
-#   - "**/*.d.ts"
+    - url: "https://raw.githubusercontent.com/Sentia/rails-config/master/codeclimate/.rubocop.yml"
+      path: "codeclimate/.rubocop.yml"
+    - url: "https://raw.githubusercontent.com/Sentia/rails-config/master/codeclimate/config.reek"
+      path: "codeclimate/config.reek"
+    - url: "https://raw.githubusercontent.com/Sentia/rails-config/master/codeclimate/.brakeman.yml"
+      path: "codeclimate/.brakeman.yml"
+
+plugins:
+  rubocop:
+    enabled: true
+    config:
+      file: codeclimate/.rubocop.yml
+  brakeman:
+    enabled: true
+    config:
+      file: codeclimate/.brakeman.yml
+  reek:
+    enabled: true
+    config:
+      file: "codeclimate/config.reek"
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+  git-legal:
+    enabled: true
+    
+exclude_patterns:
+  - "config/"
+  - "db/"
+  - "dist/"
+  - "features/"
+  - "**/node_modules/"
+  - "script/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "**/vendor/"
+  - "**/*.d.ts"
