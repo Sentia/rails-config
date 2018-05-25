@@ -3,7 +3,7 @@ source "$HOME/.bashrc"
 
 echo '--- bundling'
 bundle install
-npm install
+yarn install
 
 echo '--- preparing database'
 ./bin/rails db:create RAILS_ENV=test
