@@ -6,8 +6,8 @@ bundle install
 npm install
 
 echo '--- preparing database'
-./bin/rake db:create RAILS_ENV=test
-./bin/rake db:test:prepare
+./bin/rails db:create RAILS_ENV=test
+./bin/rails db:migrate RAILS_ENV=test
 
 echo '--- running specs'
 ./bin/rspec
