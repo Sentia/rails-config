@@ -26,6 +26,13 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+# Disable per specific files
+Metrics/ClassLength:
+  Exclude:
+    - "**/permitted_params.rb"
+
+
+# All files to be excluded
 AllCops:
   Exclude:
     - "config/**/*"
