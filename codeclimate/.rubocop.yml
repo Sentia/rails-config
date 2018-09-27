@@ -8,6 +8,9 @@ Metrics/AbcSize:
   Enabled: true
   Max: 25
 
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
 # private/protected/public
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
